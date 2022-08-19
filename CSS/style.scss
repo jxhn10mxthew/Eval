@@ -1,0 +1,61 @@
+nav{
+    img{
+    height: 2em;
+    width: 3.5em;
+    
+    }
+    .navbar-nav{
+        transform: translateX(305%);
+
+    }
+    .logo{
+        transform: translateX(30%);
+        border-radius: 25px;
+    }
+    span{
+        color: red;
+    }
+    .airlines{
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: x-large;
+    }
+    
+        background-image: url("/images/gradient");
+    
+}
+.nav-link{
+    background-color: rgb(2, 179, 31);
+    opacity: 75%;
+    color: black;
+    border-radius: 25px;
+    font-weight: bold;
+}
+//body{
+    //background-image: url("/images/galaxy.jpeg");
+//}
+body{
+    
+    background-image: url("/images/plane.jpg");
+    background-size: cover;
+    //filter: blur(8px);
+    //-webkit-filter: blur(8px);
+    
+    
+}
+section{
+    margin: 5em;
+    margin-top: 10em;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.cons{
+  
+  display: flex;
+  transform: translateY(15%);
+  border-radius: 50px;
+  
+}
+  

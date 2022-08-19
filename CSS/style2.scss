@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/plane2");
+    background-size: cover;
+}
+.details{
+    max-width: 700px;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 25px 30px;
+    border-radius: 5px;
+    .title{
+        color: #ccc;
+        font-size: 25px;
+        font-weight: 500;
+        transform: translateX(30%);
+        position: relative;
+        
+
+        ::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+        }
+
+    }
+    form .inputs{
+        transform: translateY(10%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .input-details{
+            color: #ccc;
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+            input{
+                height: 45px;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding-left: 15px;
+                font-size: 16px;
+            }
+            .detail-input{
+                display: block;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+        }
+        .gender-details .gender-title{
+            color: #ccc;
+            font-size: 20px;
+            font-weight: 500;
+            }
+            .category{
+                color: #ccc;
+                display: flex;
+                width: 80%;
+                margin: 14px 0;
+                justify-content: space-between;
+                label{
+                    display: flex;
+                    align-items: center;
+                    
+                }
+                
+                    .dot{
+                        height: 18px;
+                        width: 18px;
+                        background-color: rgb(204, 198, 198);
+                        border-radius: 40%;
+                        margin-right: 10px;
+                        border: 5px solid transparent;
+                        }
+            
+
+        
+        }
+        
+    }
+    
+        
+    }
+    #dot-1:checked ~ .category label .one,
+    #dot-2:checked ~ .category label .two,
+    #dot-3:checked ~ .category label .three{
+        border-color: #ccc;
+        background: #000000; 
+    }
+    
+    form input[type="radio"]{
+        display: none;
+    }
+    form .proceed-booking{
+        height: 45px;
+        margin: 45px 0;
+        button{
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: rgb(252, 249, 249);
+            border: none;
+            background-color: rgb(99, 99, 230);
+            font-weight: 500;
+            border-radius: 15px;
+        }
+    
+    
+}

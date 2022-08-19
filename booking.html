@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Go Airlines</title>
+    <link rel="icon" type="image/x-icon" href="/images/image1.png">
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+<body>
+  <div class="details">
+    <div class="title">Passenger details</div>
+  <form>
+    <div class="inputs">
+    <div class="input-details">
+        <span id="firstName" for="firstName" class="detail-input" >First name</span>
+        <input type="text" placeholder="Enter your first name" required>
+    </div>
+    <div class="input-details">
+        <span id="lastName" class="detail-input" >Last name</span>
+        <input type="text" placeholder="Enter your last name" required>
+    </div>
+    <div class="input-details">
+        <span id="age" class="detail-input" >Age</span>
+        <input type="text" placeholder="Enter your age" required>
+    </div>
+    <div class="input-details">
+        <span id="email" class="detail-input" >Email address</span>
+        <input type="email" placeholder="Enter your email address" required>
+    </div>
+    <div class="input-details">
+        <span id="phone" class="detail-input" >Phone-Number</span>
+        <input type="text" placeholder="Enter your phone number" required>
+    </div>
+    <div class="gender-details">
+        <input type="radio" name="gender" id="dot-1" required>
+        <input type="radio" name="gender" id="dot-2">
+        <input type="radio" name="gender" id="dot-3">
+        <span class="gender-title">Gender</span>
+            <div class="category">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+                <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Other</span>
+                </label>
+            </div>
+    </div>
+    <!-- <div class="proceed-booking">
+        <input type="submit" value="Submit" id="submit-btn">
+    </div> -->
+    <div class="proceed-booking">
+        <button type="submit" id="submit-btn">Submit</button>
+    </div>
+</div>
+</div>
+</form>  
+<!-- <script src="/CSS/javascript/valid.js"></script> -->
+<script>
+    var firstName = document.getElementById("firstName");
+var lastName = document.getElementById("lastName");
+var age = document.getElementById("age");
+var email = document.getElementById("email");
+var phoneno = document.getElementById("phone");
+var submitBtn = document.getElementById("submit-btn");
+
+var name_regex = /^[a-zA-Z]{0,20}$/;
+var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
+var email_regex = /\S+@\S+\.\S+/;
+var phone_regex = /^[0-9]{10}$/;
+
+submitBtn.disabled = "true";
+
+
+
+let inputValidator = {
+    "firstn": false,
+    "lastn": false,
+    "ageperson": false,
+    "emailid": false,
+    "phonenumber": false
+};
+
+
+firstName.addEventListener('input', validateFirstName)
+lastName.addEventListener('input', validateLastName)
+age.addEventListener('input', validateAge)
+email.addEventListener('input', validateEmail)
+phoneno.addEventListener('input', validatePhoneNo)
+
+
+function buttonRelease(){
+
+    console.log(inputValidator);
+
+    var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
+     console.log(result);
+    if(result){
+
+        submitBtn.removeAttribute("disabled");
+        console.log("Submit button active");
+    }
+    else{
+        submitBtn.disabled = "true";
+        console.log("Submit button not active");
+    }
+}
+
+
+
+
+function validateFirstName() {
+
+    console.log(firstName.value);
+
+    if (name_regex.test(firstName.value)) {
+        valid(firstName);
+        inputValidator.firstn = true;
+        buttonRelease();
+    }
+    else {
+
+        invalid(firstName);
+        inputValidator.firstn = false;
+
+    }
+}
+
+function validateLastName() {
+
+    console.log(lastName.value);
+
+    if (name_regex.test(lastName.value)) {
+        valid(lastName);
+        inputValidator.lastn = true;
+        buttonRelease();
+        
+    }
+    else {
+
+        invalid(lastName);
+        inputValidator.lastn = false;
+
+    }
+
+}
+
+function validateAge() {
+
+    console.log(age.value);
+
+    if (age_regex.test(age.value)) {
+        valid(age);
+        inputValidator.ageperson = true;
+        buttonRelease();
+        
+    }
+    else {
+
+        invalid(age);
+        inputValidator.ageperson = false;
+        buttonRelease();
+
+    }
+
+}
+
+function validateEmail() {
+
+    console.log(email.value);
+
+    if (email_regex.test(email.value)) {
+        valid(email);
+        inputValidator.emailid = true;
+        buttonRelease();
+        
+    }
+    else {
+
+        invalid(email);
+        inputValidator.emailid = false;
+
+    }
+
+}
+
+function validatePhoneNo() {
+
+    console.log(phoneno.value);
+
+    if (phone_regex.test(phoneno.value)) {
+        valid(phoneno);
+        inputValidator.phonenumber = true;
+        buttonRelease();
+        
+    }
+    else {
+
+        invalid(phoneno);
+        inputValidator.phonenumber = false;
+
+    }
+
+}
+
+function valid(element){
+
+    element.style.borderColor = "green";
+    element.style.borderWidth = "thin thick";
+
+}
+
+function invalid(element){
+
+    element.style.borderColor = "red";
+    element.style.borderWidth = "thin thick";
+
+}
+</script>
+</body>
+</html>
