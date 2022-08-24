@@ -10,7 +10,6 @@ var lastName1 = document.getElementById("lastName5");
 var age1 = document.getElementById("age5");
 var email1 = document.getElementById("emailAddress5");
 var phoneno1 = document.getElementById("phoneNo5");
-// var submitBtn1 = document.getElementById("submit-btn1");
 
 var name_regex = /^[a-zA-Z]{0,20}$/;
 var age_regex = /^(?:1[01][0-9]|1[8-9]|[2-9][0-9]|[2-9][0-9][0-9]|1[2-9][0-9])$/;
@@ -29,14 +28,11 @@ let inputValidator = {
     "phonenumber": false
 };
 
-
-
 firstName.addEventListener('input', validateFirstName)
 lastName.addEventListener('input', validateLastName)
 age.addEventListener('input', validateAge)
 email.addEventListener('input', validateEmail)
 phoneno.addEventListener('input', validatePhoneNo)
-
 
 function buttonRelease(){
 
@@ -181,10 +177,6 @@ function invalid(element){
     element.style.borderWidth = "thin thick";
 
 }
-// function savingdata(){
-//     var button=document.getElementById("submit-btn");
-//     button.addEventListener("click",submitconfirmation);
-// }
 
 function buttonpress() {
     var spform = document.getElementById("form2");
@@ -195,9 +187,9 @@ function buttonpress() {
     sessionStorage.setItem("p2p",1)
     
 }
+
 sessionStorage.setItem("p2p",0)
 
-// window.addEventListener("load",savingdata);
 function submitconfirmation(){
     var gender = document.querySelector('input[type=radio][name=gender]:checked');
     sessionStorage.setItem("fname",firstName.value);
@@ -207,22 +199,6 @@ function submitconfirmation(){
     sessionStorage.setItem("phone",phoneno.value);
     sessionStorage.setItem("gender",gender.value);
 }
-
-// window.addEventListener("load",savingdata1);
-
-// function submitconfirmation1(){
-//     var gender1 = document.querySelector('input[type=radio][name=gender1]:checked');
-//     sessionStorage.setItem("fname5",firstName1.value);
-//     sessionStorage.setItem("lname5",lastName1.value);
-//     sessionStorage.setItem("age5",age1.value);
-//     sessionStorage.setItem("email5",email1.value);
-//     sessionStorage.setItem("phone5",phoneno1.value);
-//     sessionStorage.setItem("gender5",gender1.value);
-// }
-// function savingdata1(){
-//     var button=document.getElementById("submit-btn5");
-//     button.addEventListener("click",submitconfirmation1);
-// }
 function detail_submit(){
     
     var gender = document.querySelector('input[type=radio][name=gender]:checked');

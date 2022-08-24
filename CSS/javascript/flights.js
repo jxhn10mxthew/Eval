@@ -3,7 +3,6 @@ let f_details = fetch("/Json/flights.json");
 
 f_details.then(response=>response.json()).then(data=>{
 
-
     for(let i = 0; i<data.length; i++) {
 
         let obj = data[i];
@@ -17,8 +16,6 @@ f_details.then(response=>response.json()).then(data=>{
         var box_h4 = document.createElement("h4");
         box_h4.innerHTML = obj.flightNum+" "+obj.origin+" --> "+obj.destination;
 
-
-        
         var details = document.createElement("div");
         details.className = "card-body";
 
@@ -34,12 +31,9 @@ f_details.then(response=>response.json()).then(data=>{
         const a_time = new Date(obj.ArrivalTime);
         a_h5.innerHTML = "Arrival Time: "+a_time.toUTCString();
 
-
-
         var price = document.createElement("h5");
         price.className = "card-title";
         price.innerHTML = "Price: "+obj.price;
-
 
         var book = document.createElement("a");
         book.className = "btn btn-primary";
@@ -58,17 +52,9 @@ f_details.then(response=>response.json()).then(data=>{
         details.appendChild(price);
         details.appendChild(book);
 
-        
         document.getElementById("flight-cards").appendChild(container);
 
-
-
-
-
-
-
     }
-
 
 });
 
@@ -76,5 +62,4 @@ function openpage(id)
         {
             var flnum = id;
             sessionStorage.setItem("flnum", flnum);
-            // window.location.href = "booking.html";
         }

@@ -30,14 +30,6 @@ body {
   transform: translateX(36%);
   position: relative;
 }
-.details .title ::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-}
 .details form .inputs {
   transform: translateY(10%);
   display: flex;

@@ -26,17 +26,6 @@ body{
         font-weight: 500;
         transform: translateX(36%);
         position: relative;
-        
-
-        ::before{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 30px;
-        }
-
     }
     form .inputs{
         transform: translateY(10%);
