@@ -11,218 +11,119 @@
 <body>
   <div class="details">
     <div class="title">Passenger details</div>
-  <form>
-    <div class="inputs">
-    <div class="input-details">
-        <span id="firstName" for="firstName" class="detail-input" >First name</span>
-        <input type="text" placeholder="Enter your first name" required>
-    </div>
-    <div class="input-details">
-        <span id="lastName" class="detail-input" >Last name</span>
-        <input type="text" placeholder="Enter your last name" required>
-    </div>
-    <div class="input-details">
-        <span id="age" class="detail-input" >Age</span>
-        <input type="text" placeholder="Enter your age" required>
-    </div>
-    <div class="input-details">
-        <span id="email" class="detail-input" >Email address</span>
-        <input type="email" placeholder="Enter your email address" required>
-    </div>
-    <div class="input-details">
-        <span id="phone" class="detail-input" >Phone-Number</span>
-        <input type="text" placeholder="Enter your phone number" required>
-    </div>
-    <div class="gender-details">
-        <input type="radio" name="gender" id="dot-1" required>
-        <input type="radio" name="gender" id="dot-2">
-        <input type="radio" name="gender" id="dot-3">
-        <span class="gender-title">Gender</span>
-            <div class="category">
-                <label for="dot-1">
-                    <span class="dot one"></span>
-                    <span class="gender">Male</span>
-                </label>
-                <label for="dot-2">
-                    <span class="dot two"></span>
-                    <span class="gender">Female</span>
-                </label>
-                <label for="dot-3">
-                    <span class="dot three"></span>
-                    <span class="gender">Other</span>
-                </label>
+    <form  action="/confirmation.html">
+        <div class="inputs">
+            <div class="input-details">
+                <label for="firstName" class="detail-input">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+                <small id="fname"></small>
             </div>
-    </div>
-    <!-- <div class="proceed-booking">
-        <input type="submit" value="Submit" id="submit-btn">
-    </div> -->
-    <div class="proceed-booking">
-        <button type="submit" id="submit-btn">Submit</button>
-    </div>
+            <div class="input-details">
+                <label for="lastName" class="detail-input">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+                <small id="lname"></small>
+            </div>
+            <div class="input-details">
+                <label for="age" class="detail-input">Age</label>
+                <input type="text" class="form-control" id="age" required>
+                <small id="age1"></small>
+            </div>
+            <div class="input-details">
+                <label for="emailAddress" class="detail-input">Email</label>
+                <input type="email" class="form-control" id="emailAddress" required>
+                <small id="email1"></small>
+            </div>
+            <div class="input-details">
+                <label for="phoneNo" class="detail-input">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNo" required>
+                <small id="phone1"></small>
+            </div>
+            <div class="gender-details">
+                <label for="gender" class="form-label">Gender</label><br><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="male" value="male" name="gender" required checked>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="female" value="female" name="gender">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="other" value="other" name="gender">
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+        </div>
+        <div class="proceed-booking">
+            <button type="submit" id="submit-btn" onclick="submitconfirmation()" >Submit</button>
+            
+        </div>
+        <br><br>
+        <div class="back" id="back1">
+            <a href="/Homepage.html">Back</a>
+        </div>
+        <br>
+        
+    </form>
+    <div class="add-pass">
+        <button id="addpass" onclick="window.buttonpress()">Add Passenger</button>  
+    </div> 
+    <br><br>
+    <div class="formpass2" id="form2">
+    <form  action="/confirmation.html" class="add-pass2" id="addpassform">
+        <div class="inputs">
+            <div class="input-details">
+                <label for="firstName5" class="detail-input">First Name</label>
+                <input type="text" class="form-control" id="firstName5" required>
+            </div>
+            <div class="input-details">
+                <label for="lastName5" class="detail-input">Last Name</label>
+                <input type="text" class="form-control" id="lastName5" required>
+            </div>
+            <div class="input-details">
+                <label for="age5" class="detail-input">Age</label>
+                <input type="text" class="form-control" id="age5" required>
+            </div>
+            <div class="input-details">
+                <label for="emailAddress5" class="detail-input">Email</label>
+                <input type="email" class="form-control" id="emailAddress5" required>
+            </div>
+            <div class="input-details">
+                <label for="phoneNo5" class="detail-input">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNo5" required>
+            </div>
+            <div class="gender-details">
+                <label for="gender1" class="form-label">Gender</label><br><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="male" value="male" name="gender1" required checked>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="female" value="female" name="gender1">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="other" value="other" name="gender1">
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+        </div>
+        <div class="proceed-booking">
+            <button type="submit" id="submit-btn5" onclick="detail_submit()">Submit</button>
+            
+        </div>
+        <br><br>
+        <div class="back">
+            <a href="/Homepage.html">Back</a>
+        </div>
+        <br>
+        
+    </form>
+</div> 
 </div>
-</div>
-</form>  
-<!-- <script src="/CSS/javascript/valid.js"></script> -->
-<script>
-    var firstName = document.getElementById("firstName");
-var lastName = document.getElementById("lastName");
-var age = document.getElementById("age");
-var email = document.getElementById("email");
-var phoneno = document.getElementById("phone");
-var submitBtn = document.getElementById("submit-btn");
-
-var name_regex = /^[a-zA-Z]{0,20}$/;
-var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
-var email_regex = /\S+@\S+\.\S+/;
-var phone_regex = /^[0-9]{10}$/;
-
-submitBtn.disabled = "true";
 
 
+<script src="/CSS/javascript/valid.js"></script>
 
-let inputValidator = {
-    "firstn": false,
-    "lastn": false,
-    "ageperson": false,
-    "emailid": false,
-    "phonenumber": false
-};
-
-
-firstName.addEventListener('input', validateFirstName)
-lastName.addEventListener('input', validateLastName)
-age.addEventListener('input', validateAge)
-email.addEventListener('input', validateEmail)
-phoneno.addEventListener('input', validatePhoneNo)
-
-
-function buttonRelease(){
-
-    console.log(inputValidator);
-
-    var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
-     console.log(result);
-    if(result){
-
-        submitBtn.removeAttribute("disabled");
-        console.log("Submit button active");
-    }
-    else{
-        submitBtn.disabled = "true";
-        console.log("Submit button not active");
-    }
-}
-
-
-
-
-function validateFirstName() {
-
-    console.log(firstName.value);
-
-    if (name_regex.test(firstName.value)) {
-        valid(firstName);
-        inputValidator.firstn = true;
-        buttonRelease();
-    }
-    else {
-
-        invalid(firstName);
-        inputValidator.firstn = false;
-
-    }
-}
-
-function validateLastName() {
-
-    console.log(lastName.value);
-
-    if (name_regex.test(lastName.value)) {
-        valid(lastName);
-        inputValidator.lastn = true;
-        buttonRelease();
-        
-    }
-    else {
-
-        invalid(lastName);
-        inputValidator.lastn = false;
-
-    }
-
-}
-
-function validateAge() {
-
-    console.log(age.value);
-
-    if (age_regex.test(age.value)) {
-        valid(age);
-        inputValidator.ageperson = true;
-        buttonRelease();
-        
-    }
-    else {
-
-        invalid(age);
-        inputValidator.ageperson = false;
-        buttonRelease();
-
-    }
-
-}
-
-function validateEmail() {
-
-    console.log(email.value);
-
-    if (email_regex.test(email.value)) {
-        valid(email);
-        inputValidator.emailid = true;
-        buttonRelease();
-        
-    }
-    else {
-
-        invalid(email);
-        inputValidator.emailid = false;
-
-    }
-
-}
-
-function validatePhoneNo() {
-
-    console.log(phoneno.value);
-
-    if (phone_regex.test(phoneno.value)) {
-        valid(phoneno);
-        inputValidator.phonenumber = true;
-        buttonRelease();
-        
-    }
-    else {
-
-        invalid(phoneno);
-        inputValidator.phonenumber = false;
-
-    }
-
-}
-
-function valid(element){
-
-    element.style.borderColor = "green";
-    element.style.borderWidth = "thin thick";
-
-}
-
-function invalid(element){
-
-    element.style.borderColor = "red";
-    element.style.borderWidth = "thin thick";
-
-}
-</script>
 </body>
 </html>

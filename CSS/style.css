@@ -1,5 +1,5 @@
 nav {
-  background-image: url("/images/gradient");
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(27, 27, 28, 0.5858718487) 32%, rgb(0, 212, 255) 100%);
 }
 nav img {
   height: 2em;
@@ -13,18 +13,20 @@ nav .logo {
   border-radius: 25px;
 }
 nav span {
-  color: red;
+  color: rgb(255, 255, 255);
 }
 nav .airlines {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: x-large;
+  text-decoration: none;
+  color: rgb(207, 207, 7);
 }
 
 .nav-link {
-  background-color: rgb(2, 179, 31);
+  background-color: rgb(14, 7, 7);
   opacity: 75%;
-  color: black;
+  color: rgb(206, 7, 7);
   border-radius: 25px;
   font-weight: bold;
 }
@@ -45,6 +47,35 @@ html {
 
 .cons {
   display: flex;
-  transform: translateY(15%);
+  transform: translate(0, 0) scale(0.1);
   border-radius: 50px;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  transform: translate(0, 0.5em) scale(1);
+}
+
+.show-btn {
+  visibility: visible;
+  transform: translate(0, 0.5em) scale(1);
+}
+
+.pop-btn .btn {
+  transform: translate(35em, 27em);
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  font-weight: 500;
+  border-radius: 15px;
+  color: white;
+}
+
+.caption {
+  color: beige;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  transform: translate(2em, 3.5em);
 }/*# sourceMappingURL=style.css.map */

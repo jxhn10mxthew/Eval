@@ -8,19 +8,19 @@ f_details.then(response=>response.json()).then(data=>{
 
         let obj = data[i];
         var container = document.createElement("div");
-        container.className="card text-white bg-success mb-3";
-        container.style.width="30rem";
+        container.className="card text-white bg-dark mb-3";
+        container.style.width="20rem";
 
-        var hd = document.createElement("div");
-        hd.className = "card-header";
+        var box = document.createElement("div");
+        box.className = "card-header";
 
-        var hd_h4 = document.createElement("h4");
-        hd_h4.innerHTML = obj.flightNum+" "+obj.origin+" --> "+obj.destination;
+        var box_h4 = document.createElement("h4");
+        box_h4.innerHTML = obj.flightNum+" "+obj.origin+" --> "+obj.destination;
 
 
         
-        var bd = document.createElement("div");
-        bd.className = "card-body";
+        var details = document.createElement("div");
+        details.className = "card-body";
 
         var d_h5 = document.createElement("h5");
         d_h5.className = "card-title";
@@ -46,17 +46,19 @@ f_details.then(response=>response.json()).then(data=>{
         book.innerHTML = "Book";
         book.style.color = "white";
         book.href = "booking.html";
+        book.setAttribute('id',obj.flightNum);
+        book.setAttribute('onClick','openpage(this.id)');
 
-
-        container.appendChild(hd);
-        hd.appendChild(hd_h4);
-        container.appendChild(bd);
+        container.appendChild(box);
+        box.appendChild(box_h4);
+        container.appendChild(details);
         
-        bd.appendChild(d_h5);
-        bd.appendChild(a_h5);
-        bd.appendChild(price);
-        bd.appendChild(book);
+        details.appendChild(d_h5);
+        details.appendChild(a_h5);
+        details.appendChild(price);
+        details.appendChild(book);
 
+        
         document.getElementById("flight-cards").appendChild(container);
 
 
@@ -69,3 +71,10 @@ f_details.then(response=>response.json()).then(data=>{
 
 
 });
+
+function openpage(id)
+        {
+            var flnum = id;
+            sessionStorage.setItem("flnum", flnum);
+            // window.location.href = "booking.html";
+        }
