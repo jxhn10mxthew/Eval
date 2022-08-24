@@ -55,4 +55,14 @@ body {
 
 hr {
   visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgb(99, 99, 230);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
 }/*# sourceMappingURL=style3.css.map */
