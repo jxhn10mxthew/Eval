@@ -7,49 +7,28 @@ body {
 
 .con-flights {
   max-width: 800px;
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: 240px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px 30px;
   border-radius: 5px;
-  transform: translateX(15em);
   font-size: large;
   border-color: black;
   border-style: solid;
-}
-.con-flights .con_flights {
-  transform: translateY(-1em);
+  margin: 0 auto;
 }
 
-.con-details {
-  max-width: 800px;
-  width: 100%;
-  height: 250px;
+.con-detailsA {
+  width: 50%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px 30px;
   border-radius: 5px;
-  transform: translateX(15em);
   font-size: large;
   border-color: black;
   border-style: solid;
-}
-.con-details .con_details {
-  transform: translateY(-2em);
+  align-self: center;
+  margin: 0 auto;
 }
 
-.con-details2 {
-  max-width: 800px;
-  width: 100%;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px 30px;
-  border-radius: 5px;
-  transform: translateX(15em);
-  font-size: large;
-  border-color: black;
-  border-style: solid;
-}
-.con-details2 .con_details2 {
+.con_details2 {
   transform: translateY(-2em);
 }
 
@@ -60,9 +39,12 @@ hr {
 a {
   text-decoration: none;
   font-weight: bold;
+  font-size: large;
   background-color: rgb(99, 99, 230);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: white;
+  margin-left: 60em;
+  border-radius: 15%;
 }/*# sourceMappingURL=style3.css.map */
